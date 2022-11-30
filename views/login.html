@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login | Sabka Bazar</title>
+    <!-- <link rel="stylesheet" href="../assets/styles/theme.css"> -->
+    <link rel="stylesheet" href="../assets/sass/pages/login.css" />
+    <link rel="stylesheet" href="../assets/sass/pages/header.css" />
+    <link rel="stylesheet" href="../assets/sass/pages/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Dosis:400,600,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- section-header-start -->
+    <header class="header" id="header"></header>
+    <!-- section-header-end-->
+
+    <!-- Sample Division for the content-start -->
+
+    <div class="login-content">
+      <div class="heading">
+        <h2 class="top-heading">Login</h2>
+        <p class="sub-heading">
+          Get access to your Orders, Wishlist and Recomendations
+        </p>
+      </div>
+
+      <form class="login-form" autocomplete="off">
+        <div class="login-container">
+          <div class="input-fields">
+            <label class="required">Email address</label>
+            <input type="text" id="email" autofocus tabindex="1" />
+            <div class="input-indicator"></div>
+          </div>
+          <div id="emailerror" class="error-msg"></div>
+
+          <div class="input-fields">
+            <label class="required" for="password">Password</label>
+            <input type="password" id="password" tabindex="2" />
+            <span class="eye" id="eye">
+              <i id="hide1" class="fa fa-eye"> </i>
+              <i id="hide2" class="fa fa-eye-slash"> </i>
+            </span>
+            <div class="input-indicator"></div>
+          </div>
+          <div id="passworderror" class="error-msg"></div>
+
+          <button name="submit" value="Submit" id="loginsuccess">Login</button>
+          <div class="pass-txt">
+            <a class="forget" href="./resetpassword.html">Forgot password?</a>
+          </div>
+
+          <!-- Forgot <a href="#"> password? </a>    -->
+        </div>
+      </form>
+    </div>
+
+    <!-- Sample Division for the content-end -->
+
+    <!-- footer-start -->
+    <footer>
+      <div class="footer">
+        Copyright &copy; 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd
+      </div>
+    </footer>
+    <!-- footer-end -->
+
+    <!-- <script type="module" src="../assets/js/loginuserinterface.js"></scr> -->
+    <script type="module" src="../assets/js/login.js"></script>
+    <script type="module" src="../assets/js/header.js"></script>
+  </body>
+</html>

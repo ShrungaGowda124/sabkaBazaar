@@ -1,0 +1,47 @@
+@import "./colors";
+
+@mixin display(
+  $display,
+  $direction,
+  $width: auto,
+  $positionmain: none,
+  $positioncross: none
+) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $positionmain;
+  align-items: $positioncross;
+  width: $width;
+}
+
+@mixin button($width, $background, $textcolor, $radius, $cursor) {
+  width: $width;
+  color: $textcolor;
+  background-color: $background;
+  border-radius: $radius;
+  cursor: $cursor;
+}
+
+@mixin forms($display, $positionmain, $marginleft, $marginright, $margintop) {
+  display: $display;
+  justify-content: $positionmain;
+  margin-left: $marginleft;
+  margin-left: $marginright;
+  margin-top: $margintop;
+}
+
+@mixin inputfields(
+  $border,
+  $borderbottom,
+  $width,
+  $outline,
+  $padding,
+  $height
+) {
+  border: $border;
+  border-bottom: $borderbottom;
+  width: $width;
+  outline: $outline;
+  padding: $padding;
+  height: $height;
+}

@@ -1,0 +1,125 @@
+@import "../abstract/colors";
+@import "../abstract/mixin";
+@import "../abstract/breakpoint";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Dosis;
+}
+
+body {
+  background-color: $body-background;
+}
+
+.cart {
+  @include display(flex, column, 100%, none, none);
+  overflow-x: hidden;
+  margin-top:50px;
+}
+.cart-header {
+  @include display(flex, row, 100%, none, none);
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #ffffff;
+}
+
+.total-items {
+  margin-left: 5px;
+}
+.header-content {
+  @include display(flex, row, auto, space-evenly, none);
+}
+
+.cart-items {
+  @include display(flex, column, 100%, none, none);
+  background: color #e2e2e2;
+}
+.cart-item {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.item-info-desc {
+  display: flex;
+  width: 80%;
+}
+.item-info {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.item-info img {
+  width: 90px;
+}
+.units {
+  display: flex;
+  padding: 5px 0;
+}
+
+.number{
+  width:15px;
+}
+
+.desc {
+  @include display(flex, column, auto, center);
+  line-height: 20px;
+  padding-left: 10%;
+}
+.price {
+  @include display(flex, column, 15%, center, center);
+  font-weight: bold;
+}
+.btn {
+  @include button(20px, $btn-pink, black, 10%, pointer);
+  font-weight: bold;
+  margin: 0 4px;
+}
+.remove-item{
+  cursor: pointer;
+  color: blue;
+}
+
+//footer section
+.cart-footer {
+  @include display(flex, column, 100%, center, center);
+  position: fixed;
+  bottom: 0;
+  justify-self: flex-end;
+  background-color: #ffffff;
+  box-shadow: 0 -1px 3px 0px #8888;
+}
+
+.checkoutbtn {
+  @include display(flex, row, 90%, space-between, center);
+  @include button(none, $btn-pink, $white1, 5px, pointer);
+  margin: 10px 0;
+  padding: 20px 10px;
+  font-weight: bold;
+}
+
+.footer-message {
+  padding: 5px;
+}
+.lowest-price-section{
+  margin-bottom: 10rem;
+}
+@media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .cart{
+    margin-top:80px
+  }
+}
+@media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+  ._contianer {
+    @include display(flex,column,auto,center,center);
+  }
+  .cart-footer {
+    width: 80%;
+  }
+  .cart {
+    width: 80%;
+    margin-top:85px;
+  }
+}

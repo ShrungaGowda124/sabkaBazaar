@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page | SabkaBazar</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Dosis:400,600,700"
+    />
+    <link rel="stylesheet" href="../assets/sass/pages/cartpage.css" />
+    <link rel="stylesheet" href="../assets/sass/pages/header.css" />
+  </head>
+
+  <body class="_contianer">
+    <header class="header" id="header"></header>
+    <!-- cart is main section -->
+    <div class="cart">
+      <!-- cart header provides the upper part of the page -->
+      <div class="cart-header" autofocus tabindex="1">
+        <div class="header-content">
+          <h3>Mycart</h3>
+          <span class="total-items">item(2)</span>
+        </div>
+      </div>
+      <!-- cart items have every single item which is added to cart and with discription -->
+      <div class="cart-items" id="cartitems"></div>
+
+      <div class="lowest-price-section">
+        <img
+          src="../static/images/lowest-price.png"
+          alt="lowestprice image"
+          class="lowestprice"
+        />
+      </div>
+
+      <!-- cart footer Section -->
+      <!-- footer section consist checkout button with total money on it -->
+      <div class="cart-footer">
+        <div class="footer-message">Promocode Can be apply on payment page</div>
+        <div class="checkoutbtn" tabindex="6">
+          <div class="checkoutbtncontent">Proceed to checkout</div>
+          <div class="total">Rs.187</div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="../assets/js/cartpage.js"></script>
+    <script type="module" src="../assets/js/header.js"></script>
+  </body>
+</html>

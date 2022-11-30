@@ -1,0 +1,139 @@
+@import "../abstract/colors";
+@import "../abstract/breakpoint";
+
+// css for header
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Dosis;
+}
+
+.header-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 3px 10px 0px $shadow-color;
+}
+
+.header-logo {
+  cursor: pointer;
+  position: absolute;
+  width: 100px;
+  margin: 8px 10px 10px 10px;
+}
+
+.home-cart {
+  cursor: pointer;
+  width:30%;
+  height: 60px;
+  display: flex;
+  float: right;
+  background-color: $white2;
+  padding: 10px;
+}
+
+.home-cart img {
+  height: 100%;
+  width:40%;
+}
+.home-cart p {
+  margin-top: 12px;
+  font-size: 17px;
+}
+
+.link-left {
+  display: none;
+}
+.link-right {
+  display: none;
+}
+
+@media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .header-logo {
+    padding-top: 5px;
+    width: auto;
+    height: 70px;
+  }
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    float: right;
+  }
+  .home-cart {
+    width:100%;
+    margin-top: 10px;
+  }
+  .home-cart img {
+    height: 120%;
+  }
+  .home-cart p {
+    font-size: 25px;
+  }
+  .link-left {
+    display: block;
+    float: left;
+    margin-top: 60px;
+    padding-left: 250px;
+    position: absolute;
+  }
+  .link-right {
+    display: block;
+  }
+  .link {
+    color: rgb(119, 112, 112);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+  .header-nav {
+    height: 80px;
+  }
+  .header-logo {
+    width: 150px;
+  }
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    float: right;
+  }
+  .home-cart {
+    width:100%;
+    height: 45px;
+    margin-top: 5px;
+    align-items: center;
+  }
+  .home-cart img {
+    padding: 2%;
+    height: 170%;
+    width:30%;
+  }
+  .home-cart p {
+    font-size: 25px;
+    padding-bottom: 15px;
+  }
+  .link-left {
+    display: block;
+    float: left;
+    margin-top: 50px;
+    padding-left: 300px;
+    position: absolute;
+  }
+  .link-right {
+    display: block;
+    margin-top: 5px;
+  }
+  .link {
+    color: rgb(80, 78, 78);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 20px;
+  }
+}

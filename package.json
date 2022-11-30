@@ -1,0 +1,23 @@
+{
+  "name": "psi-jan-2022-prod-case-study",
+  "version": "1.0.0",
+  "description": "readme",
+  "main": "index.js",
+  "dependencies": {
+    "canned": "^0.3.13",
+    "lodash": "^4.17.21",
+    "minimist": "^0.0.10",
+    "optimist": "^0.6.1",
+    "wordwrap": "^0.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "canned -p 3000 ./server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://tools.publicis.sapient.com/bitbucket/scm/psjan/psi-jan-2022-prod-case-study.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

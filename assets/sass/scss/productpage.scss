@@ -1,0 +1,365 @@
+@import "../abstract/breakpoint";
+@import "../abstract/colors";
+@import "../abstract/mixin";
+
+*{
+    margin: 0px;
+     font-family: Dosis;
+}
+
+// ------start of dropdown menu in the mobile view -------------------------
+.display-layout{
+    margin-top: 60px;
+}
+.dropbtn {
+    width: 100%;
+    background-color: #DE3163;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  .dropdown {
+      width: 100%;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+      width: 100%;
+    display: none;
+    position: absolute;
+    background-color: #DE3163;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+ .show {display:block;}
+
+// -----------category details design in the drop down menu---
+ .filter-categories-section{
+    list-style: none;
+    background-color: #faf2f2;
+    
+}
+.filter-categories-section li{
+    padding: 10px  0px;
+}
+// -----------allign the categories in the center
+.item-list{
+    text-align: center; 
+    padding-left: -40px;
+}
+
+
+// ------end of dropdown menu in the mobile view -------------------------
+
+// --------products displaying part ------
+.products{
+    padding: 10px;
+}
+
+// ----------product name -----
+.product-name{
+    margin-bottom: 20px;
+  
+}
+// ----------product image----------
+.product-image{
+    width: 50%;
+    padding: 2px;
+    
+}
+.product-image img{
+     width: 100%; 
+}
+
+// ----------product description and buy button-----
+
+.description-buy{
+    width: 50%;
+}
+ 
+//------detail of image and description
+.products-details{
+    display: flex;
+    padding-bottom: 15px;
+}
+
+//--------description of the product---
+.product-description{
+   height: 55%;
+   padding-top: 3px;
+   padding-left: 5px;
+   padding-right: 5px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 5; /* number of lines to show */
+   -webkit-box-orient:vertical;
+    background-color: #faf2f2;
+}
+//------buy now button-----------
+.product-price button{
+    margin-top: 35px;
+    width: 100%;
+    padding:10px 0px;
+    //color: white;
+    //background-color:#DE3163;
+    border: none;
+    @include button(none,$btn-pink,white,none,pointer);
+}
+
+// ----------------hidden in the mobile view  --------------
+
+.product-price1 {
+     display: none;
+}
+.item-image{
+    display: none; 
+}
+.tabview-buy-button{
+    display: none;
+}
+.desktopview-buy-button{
+    display: none;
+}
+.item-description{
+    display: none;
+}
+.filter{
+    display: none;
+}
+
+@media screen and (min-width: $tablet-min) and (max-width:$tablet-max)  {
+ //-----view of the main container----
+  .display-layout{
+      display: flex;
+      flex-direction: row;
+      margin-top: 90px;
+  }
+
+  //-------------product name-------- 
+  .product-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient:vertical;
+}
+//-----------category details to filter---------
+.mobile-filter{
+    display: none;
+}
+
+//--------filtering division----------
+.filter{
+      width: 25%;
+       display: grid;
+       background-color: #f0e6e6; 
+  }
+  
+ //----------------list of categories--------- 
+  .item-list{
+    text-align: center;
+    margin-left: -40px;
+    border-bottom: 2px dotted rgb(224, 111, 130);
+}
+.item-list:hover{
+    background-color: rgb(224, 111, 130);
+    color: white;
+}
+  
+
+  .category-details{
+      padding: 5px 10px 5px 0px ;
+  }
+
+  .side-menu  li{
+   list-style: none;
+   padding:20px 5px 10px 5px  ;
+   
+  }
+
+  //------------products details----------
+  .products-view{
+    width: 75%;
+    float:right;
+  
+}
+ //----------image and product details
+  .products-details{
+    display: flex;
+    // border-bottom: 2px dotted #bdbdbd;
+    padding-bottom: 15px;
+    //margin-bottom: 30px;
+}
+  //------------product name---------
+  .product-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient:vertical;
+}
+//--------displaying all the products
+   .product-details-display{
+       display: grid;
+       grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+   }
+   .side-menu{
+    height: 100vh;
+}
+#category-details1{
+    height: 100%;
+}
+.item-list{
+    cursor: pointer;
+}
+}
+
+
+@media screen and (min-width: $desktop-min) and (max-width:$desktop-max){
+    // -----view of the main container
+    .display-layout{
+        display: flex;
+        flex-direction: row;
+        margin-top: 90px;
+    }
+  //--------------filtering the categories
+    .filter{
+        width: 20%;
+         display: block;
+         background-color: #f0e6e6;
+         text-align: center;
+      //    height: 200px;
+    }
+    //------------category list allignment---------
+    .side-menu li{
+         margin-left: -40px;
+         text-align: center;
+         cursor: pointer;
+    }
+    .side-menu{
+        height: 100vh;
+    }
+    
+    .item-list:hover{
+        background-color: rgb(224, 111, 130);
+        color: white;
+    }
+    
+    .item-list{
+        border-bottom: 1px dotted rgb(224, 111, 130);
+    }
+    
+     .side-menu  li{
+   list-style: none;
+   padding:20px 10px 10px 5px  ;
+   
+  }
+
+  //-----------------product details------------
+  .products-view{
+    width: 80%;
+    float: right;
+   }
+   .product-details-display{
+     display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(205px,1fr));
+   }
+  .product-name {
+        height: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+        -webkit-box-orient:vertical;
+        
+    }
+
+    .products-details{
+       justify-content: center;
+    }
+    .products-details img{
+        width: 150px;
+    }
+    .product-info{
+        padding-bottom: 25px;
+    }
+    .desktopview-buy-button{
+        display: flex;
+    }
+    
+    
+    .desktopview-buy-button p{ 
+         width: 100%;
+          color: black;
+          width: 50%;
+          padding-top: 13px;
+          justify-content: center;
+          align-items: center;
+        border: none;
+       
+    }
+    .desktopview-buy-button button{
+        width:50%;
+        padding: 10px 0px;
+        border: none;
+        @include button(none,$btn-pink,white,none,pointer);
+    }
+    .tabview-buy-button p{
+    background-color: white;
+    color: black;
+    }
+
+    //-----------description of the item -----------
+    .item-description{
+        height: 90px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* number of lines to show */
+        -webkit-box-orient:vertical;
+        margin-bottom: 20px;
+        background-color:#faf6f6;
+        padding: 4px;
+    }
+    
+    .products:hover{
+        box-shadow: 0px 0px 2px 3px pink;
+        cursor: pointer;
+    }
+
+    .product-price{
+        display: none;
+    }
+    .product-description{
+        display: none;
+    }
+    .tabview-buy-button{
+        display:none;
+    }
+    .description-buy{
+        display: none;
+    }
+    .product-price{
+        display: none;
+    }
+    .items-details{
+        display: none;
+    }
+    .mobile-filter{
+        display: none;
+        
+    }
+
+
+  }
+   

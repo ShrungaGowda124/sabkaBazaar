@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SignUp | Sabka Bazar</title>
+    <link rel="stylesheet" href="../assets/sass/pages/header.css" />
+    <link rel="stylesheet" href="../assets/sass/pages/footer.css" />
+    <link rel="stylesheet" href="../assets/sass/pages/signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Dosis:400,600,700"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  </head>
+
+  <body>
+    <!-- section-header-start -->
+    <header>
+      <div class="header-nav">
+        <img
+          class="header-logo"
+          src="../static/images/logo.png"
+          alt="logo image"
+        />
+        <div class="link-left">
+          <a href="homepage.html" class="link">Home</a>
+          <a href="productpage.html" class="link">Products</a>
+        </div>
+        <div class="header-right">
+          <div class="link-right">
+            <a href="login.html" class="link">SignIn</a>
+          </div>
+          <div class="home-cart">
+            <img src="../static/images/shoppingcart.png"></img>
+            <p>Cart</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- section-header-end-->
+
+    <!-- Sample Division for the content-start -->
+    <div class="signup-content">
+      <div class="heading">
+        <h2 class="top-heading">SignUp</h2>
+        <p class="sub-heading">
+          Get access to your Orders, Wishlist and Recomendations
+        </p>
+      </div>
+      <form class="login-form" name="myform" autocomplete="off">
+        <div class="login-container">
+          <div class="input-fields">
+            <label class="required" for="first-name">First Name</label>
+            <input
+              type="text"
+              name="text1"
+              autofocus
+              tabindex="1"
+              id="first-name"
+            />
+            <div class="input-indicator"></div>
+          </div>
+          <div id="nameerror" class="error-msg"></div>
+
+          <div class="input-fields">
+            <label class="required" for="last-name">Last Name</label>
+            <input type="text" name="text1" tabindex="1" id="last-name" />
+            <div class="input-indicator"></div>
+          </div>
+          <div id="lastnameerror" class="error-msg"></div>
+
+          <div class="input-fields">
+            <label class="required" for="email-address">Email address</label>
+            <input type="text" name="text1" tabindex="3" id="email-address" />
+            <div class="input-indicator"></div>
+          </div>
+          <div id="emailerror" class="error-msg"></div>
+
+          <div class="input-fields">
+            <label class="required" for="password">Password</label>
+            <input type="password" tabindex="4" id="password" />
+            <span class="eye" onclick="eyePassword()">
+              <i id="hide1" class="fa fa-eye"> </i>
+              <i id="hide2" class="fa fa-eye-slash"> </i>
+            </span>
+            <div class="input-indicator"></div>
+          </div>
+          <div id="passworderror" class="error-msg"></div>
+
+          <div class="input-fields">
+            <label class="required" for="confirm-password"
+              >Re-enter Password</label
+            >
+            <input
+              type="password"
+              tabindex="5"
+              id="confirm-password"
+              onclick="confirmpassword()"
+            />
+            <span class="eye" onclick="eyeConfirmPassword()">
+              <i id="hide3" class="fa fa-eye"> </i>
+              <i id="hide4" class="fa fa-eye-slash"> </i>
+            </span>
+            <div class="input-indicator"></div>
+          </div>
+          <div id="confirmpassworderror" class="error-msg"></div>
+
+          <button name="submit" value="Submit" onclick="success(event)">
+            SignUp
+          </button>
+          <input
+            type="button"
+            class="resetbutton"
+            onclick="reset()"
+            value="Reset form"
+          />
+        </div>
+      </form>
+    </div>
+
+    <!-- Sample Division for the content-end -->
+
+    <!-- footer-start -->
+    <footer>
+      <div class="footer">
+        Copyright &copy; 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd
+      </div>
+    </footer>
+    <!-- footer-end -->
+    <script src="../assets/js/signup.js"></script>
+  </body>
+</html>
